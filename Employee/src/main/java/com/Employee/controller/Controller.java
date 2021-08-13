@@ -19,20 +19,20 @@ public class Controller {
 
 
 	@GetMapping("/emp")
-	public List<EmployeeEntity> getAllMobile() {
+	public List<EmployeeEntity> getAllEmpl() {
 		List<EmployeeEntity> empl = emplService.showAllEmpl();
 		return empl;
 
 	}
 	@GetMapping("/emp/{gender}")
-	public List<EmployeeEntity> getMobile(@PathVariable String gender) {
+	public List<EmployeeEntity> getEmpl(@PathVariable String gender) {
 		List<EmployeeEntity> empl = emplService.filterByGender(gender);
 
 		return empl;
 	}
 
 	@PostMapping("/emp")
-	public void postMobile(@RequestBody EmployeeEntity emp) {
+	public void postEmpl(@RequestBody EmployeeEntity emp) {
 		emplService.addEmp(emp);
 		
 
